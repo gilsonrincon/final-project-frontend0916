@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-frontend0916",
+  "version": "1.0.0",
+  "description": "Tienda on-line con LESS y NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilson Rincón",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-less": "^3.1.0",
+    "merge-stream": "^1.0.0"
+  }
+}
