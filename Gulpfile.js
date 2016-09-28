@@ -4,7 +4,7 @@ var cleanCSS = require('gulp-clean-css');
 var merge = require('merge-stream');
 
 gulp.task('less', function(){
-	return gulp.src(['./less/**/*.less', '!less/vars.less', '!less/main.less'])
+	return gulp.src('./less/main.less')
 			.pipe(less())
 			.pipe(cleanCSS())
 			.pipe(gulp.dest('./css/'));
