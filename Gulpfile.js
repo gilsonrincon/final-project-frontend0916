@@ -2,12 +2,14 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 var merge = require('merge-stream');
+var livereload = require('gulp-livereload');
 
 gulp.task('less', function(){
 	return gulp.src('./less/main.less')
 			.pipe(less())
 			.pipe(cleanCSS())
-			.pipe(gulp.dest('./css/'));
+			.pipe(gulp.dest('./css/'))
+			.pipe(livereload());
 });
 
 gulp.task('bootstrap', function(){
@@ -28,7 +30,12 @@ gulp.task('jquery', function(){
 			.pipe(gulp.dest('./js'));
 });
 
-gulp.task('default', ['less', 'bootstrap', 'jquery']);
+gulp.task('watch', function(){
+	livereload();
+	gulp.watch('./less/**/*.less', ['less']);
+});
+
+gulp.task('default', ['less', 'bootstrap', 'jquery', 'watch']);
 
 
 
