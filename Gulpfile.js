@@ -5,6 +5,7 @@ var merge = require('merge-stream');
 var livereload = require('gulp-livereload');
 
 gulp.task('less', function(){
+	console.log('Convirtiendo de less a css .....');
 	return gulp.src('./less/main.less')
 			.pipe(less())
 			.pipe(cleanCSS())
@@ -31,6 +32,7 @@ gulp.task('jquery', function(){
 });
 
 gulp.task('watch', function(){
+	console.log('Camnbios en el folder less.....');
 	livereload();
 	gulp.watch('./less/**/*.less', ['less']);
 });
