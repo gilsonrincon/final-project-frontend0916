@@ -1,0 +1,13 @@
+extends esquema
+
+block content
+    h1.titulo-productos-destacados Contáctenos
+    form(action='/contacto', method='POST')
+      .form-group
+        label(for='name') Nombre completo
+        input#name.form-control(type='text', placeholder='Su nombre')
+      .form-group
+        label(for='email') Correo electrónico
+        input#email.form-control(type='email', placeholder='Su e-mail')
+      button.btn.btn-primary(type='submit') Enviar
+

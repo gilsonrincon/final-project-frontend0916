@@ -1,0 +1,34 @@
+extends esquema
+
+block content
+        h1.titulo-productos-destacados
+          | Productos Destacados
+        // Inicio lista de productos
+        ul.products
+          // Product 1
+          li
+            img(alt='', src='img/producto1.jpg')
+            h2
+              a(href='producto1.html')
+                | Producto 1
+            p Descripción del producto
+            a.btn-buy(href='')
+              i.glyphicon.glyphicon-shopping-cart(aria-hidden='true')
+              |  Comprar
+          // Product 2
+          li
+            img(alt='', src='img/producto2.jpg')
+            h2 Producto 2
+            p Descripción del producto
+            a.btn-buy(href='')
+              i.glyphicon.glyphicon-shopping-cart(aria-hidden='true')
+              |  Comprar
+          // Product 3
+          li
+            img(alt='', src='img/producto3.jpg')
+            h2 Producto 3
+            p Descripción del producto
+            a.btn-buy(href='')
+              i.glyphicon.glyphicon-shopping-cart(aria-hidden='true')
+              |  Comprar
+        // fin lista de productos
