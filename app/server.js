@@ -24,7 +24,8 @@ server.get('/producto/:id',function(req, res){
 		var objProducto = JSON.parse(fs.readFileSync(producto,'utf8'));	
 		res.render('producto', objProducto);
 	}catch(e){
-		res.send('Error: Producto no encontrado.');
+		res.render('error',{code: 404,
+							msg: 'Error: Producto no encontrado.'});
 	}
 });
 
