@@ -3,8 +3,8 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     title eCommerce Store
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/main.css')
   body
     // Inicio del top-bar
     nav.navbar.navbar-default
@@ -46,35 +46,36 @@ html(lang='en')
     // Fin del top-bar
     .container
       .row
-        // inicio banner
-        #banner-home-page.carousel.slide(data-ride='carousel')
-          // Indicators
-          ol.carousel-indicators
-            li.active(data-target='#banner-home-page', data-slide-to='0')
-            li(data-target='#banner-home-page', data-slide-to='1')
-            li(data-target='#banner-home-page', data-slide-to='2')
-          // Wrapper for slides
-          .carousel-inner(role='listbox')
-            .item.active(style='height: 300px; width: 900px;')
-              img(src='img/banner1.jpg', alt='...')
-              .carousel-caption
-                | Descripción de la imagen para el banner.
-            .item
-              img(style='height: 300px; width: 900px;', src='img/banner2.jpg', alt='...')
-              .carousel-caption
-                | Esta es otra imagen
-            .item
-              img(style='height: 300px; width: 900px;', src='img/banner3.jpg', alt='...')
-              .carousel-caption
-                | Esta es la última imagen
-          // Controls
-          a.left.carousel-control(href='#banner-home-page', role='button', data-slide='prev')
-            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-            span.sr-only Previous
-          a.right.carousel-control(href='#banner-home-page', role='button', data-slide='next')
-            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-            span.sr-only Next
-        // fin banner
+        unless name
+          // inicio banner
+          #banner-home-page.carousel.slide(data-ride='carousel')
+            // Indicators
+            ol.carousel-indicators
+              li.active(data-target='#banner-home-page', data-slide-to='0')
+              li(data-target='#banner-home-page', data-slide-to='1')
+              li(data-target='#banner-home-page', data-slide-to='2')
+            // Wrapper for slides
+            .carousel-inner(role='listbox')
+              .item.active(style='height: 300px; width: 900px;')
+                img(src='/img/banner1.jpg', alt='...')
+                .carousel-caption
+                  | Descripción de la imagen para el banner.
+              .item
+                img(style='height: 300px; width: 900px;', src='/img/banner2.jpg', alt='...')
+                .carousel-caption
+                  | Esta es otra imagen
+              .item
+                img(style='height: 300px; width: 900px;', src='/img/banner3.jpg', alt='...')
+                .carousel-caption
+                  | Esta es la última imagen
+            // Controls
+            a.left.carousel-control(href='#banner-home-page', role='button', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+              span.sr-only Previous
+            a.right.carousel-control(href='#banner-home-page', role='button', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+              span.sr-only Next
+          // fin banner
       .row
         block content
 
@@ -94,13 +95,13 @@ html(lang='en')
         ul.social-networks.col-xs-12.col-sm-6.col-md-4
           li
             a(href='http://facebook.com', target='_blank')
-              img(src='img/facebook.png', alt='')
+              img(src='/img/facebook.png', alt='')
           li
             a(href='http://twitter.com', target='_blank')
-              img(src='img/twitter.png', alt='')
+              img(src='/img/twitter.png', alt='')
           li
             a(href='http://linkedin.com', target='_blank')
-              img(src='img/linkedin.png', alt='')
+              img(src='/img/linkedin.png', alt='')
 
-    script(src='js/jquery.min.js')
-    script(src='js/bootstrap.min.js')
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.min.js')

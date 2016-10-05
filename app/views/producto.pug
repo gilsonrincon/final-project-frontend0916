@@ -1,0 +1,10 @@
+extends esquema
+
+block content
+	h1.titulo-productos-destacados= name
+	img(src="/img/"+img)
+	p= description
+	span.price= "$"+price
+	ul
+		each tag in tags
+			li= tag

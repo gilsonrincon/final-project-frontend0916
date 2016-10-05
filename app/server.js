@@ -1,4 +1,6 @@
 var express = require('express');
+var fs = require('fs');
+
 var server = express();
 
 server.set('view engine', 'pug');
@@ -13,8 +15,17 @@ server.get('/contacto', function(req, res){
 	res.render('contacto');
 });
 
-server.get('/product/:id',function(req, res){
-	res.send(req.params.id);
+server.get('/producto/:id',function(req, res){
+	//Generamos la ruta del archivo
+	var producto = "productos/"+req.params.id+".json";
+
+	try{
+		//Convertimos el archivo leido en un formato JSON
+		var objProducto = JSON.parse(fs.readFileSync(producto,'utf8'));	
+		res.render('producto', objProducto);
+	}catch(e){
+		res.send('Error: Producto no encontrado.');
+	}
 });
 
 server.use('/img', express.static('assets'));
