@@ -2,5 +2,5 @@
 	"id": 3,
 	"name": "Categoría 3",
 	"description": "Descripciòn de la categoría 3",
-	"products": [1,2]
+	"products": [1,2,4]
 }

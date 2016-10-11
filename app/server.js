@@ -11,12 +11,11 @@ server.get('/', function(req, res){
 	fs.readdir(dir, function(err, files){
 		files.forEach(function(file){
 			var objProd = JSON.parse(fs.readFileSync(dir+file, "utf8"));
-			console.log(arrProd.push(objProd));
+			arrProd.push(objProd);
 		})
-		console.log(arrProd);
-	})
 
-	res.render('index');
+		res.render('index', {productos: arrProd});
+	})
 });
 
 server.get('/contacto', function(req, res){
@@ -61,8 +60,9 @@ server.get("/categoria/:id",function(req, res){
 })
 
 server.use('/img', express.static('assets'));
-server.use('/css', express.static('../css'));
-server.use('/js', express.static('../js'));
+server.use('/css', express.static('./css'));
+server.use('/js', express.static('./js'));
+server.use('/fonts', express.static('./fonts'));
 
 server.listen(8080, function(){
 	console.log('Estamos corriendo en el puerto 8080....');
