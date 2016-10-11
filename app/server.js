@@ -6,7 +6,16 @@ var server = express();
 server.set('view engine', 'pug');
 
 server.get('/', function(req, res){
-	//res.send('Hola');
+	var dir ="./productos/";
+	var arrProd = [];
+	fs.readdir(dir, function(err, files){
+		files.forEach(function(file){
+			var objProd = JSON.parse(fs.readFileSync(dir+file, "utf8"));
+			console.log(arrProd.push(objProd));
+		})
+		console.log(arrProd);
+	})
+
 	res.render('index');
 });
 

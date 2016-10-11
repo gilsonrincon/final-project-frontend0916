@@ -1,9 +1,16 @@
 extends esquema
 
 block content
-	h1=categoria.name
-	each pro in productos
-		p
-			| Este es el nombre: #{pro.name}
-		p #{pro.description}
-		img(src="/img/"+pro.img)
+	h1.titulo-productos-destacados=categoria.name
+	p.lead= categoria.description
+	ul.products
+		each pro in productos
+			li
+				a(href="/producto/"+pro.id)
+					img(src="/img/"+pro.img)
+				h2
+					a(href="/producto/"+pro.id)
+						| #{pro.name}
+				p= pro.description
+				a.btn-buy(href="#")
+					i.glyphicon.glyphicon-shopping-cart(aria-hidden="true") Comprar
