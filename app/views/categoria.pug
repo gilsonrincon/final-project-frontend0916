@@ -1,0 +1,9 @@
+extends esquema
+
+block content
+	h1=categoria.name
+	each pro in productos
+		p
+			| Este es el nombre: #{pro.name}
+		p #{pro.description}
+		img(src="/img/"+pro.img)

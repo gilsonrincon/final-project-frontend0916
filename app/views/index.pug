@@ -7,9 +7,10 @@ block content
         ul.products
           // Product 1
           li
-            img(alt='', src='img/producto1.jpg')
+            a(href="producto/1")
+              img(alt='', src='img/producto1.jpg')
             h2
-              a(href='producto1.html')
+              a(href='/producto/1')
                 | Producto 1
             p Descripción del producto
             a.btn-buy(href='')
@@ -17,16 +18,22 @@ block content
               |  Comprar
           // Product 2
           li
-            img(alt='', src='img/producto2.jpg')
-            h2 Producto 2
+            a(href="producto/2")
+              img(alt='', src='img/producto2.jpg')
+            h2
+              a(href="/producto/2")
+                | Producto 2
             p Descripción del producto
             a.btn-buy(href='')
               i.glyphicon.glyphicon-shopping-cart(aria-hidden='true')
               |  Comprar
           // Product 3
           li
-            img(alt='', src='img/producto3.jpg')
-            h2 Producto 3
+            a(href="producto/3")
+              img(alt='', src='img/producto3.jpg')
+            h2 
+              a(href="/producto/3")
+                | Producto 3
             p Descripción del producto
             a.btn-buy(href='')
               i.glyphicon.glyphicon-shopping-cart(aria-hidden='true')

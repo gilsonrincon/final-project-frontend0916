@@ -29,8 +29,31 @@ server.get('/producto/:id',function(req, res){
 	}
 });
 
+server.get("/categoria/:id",function(req, res){
+	var categoria = "categorias/"+req.params.id+".json";
+	try{
+		var objCategoria = JSON.parse(fs.readFileSync(categoria,"utf8"));
+		var arrProductos = [];
+		var paso;
+		for(paso = 0; paso < objCategoria.products.length; paso++){
+			producto = objCategoria.products[paso];
+			var prod="productos/"+producto+".json";
+			var objProd=JSON.parse(fs.readFileSync(prod,"utf8"))
+			arrProductos[paso] = objProd;
+		}
+
+		res.render("categoria", {productos: arrProductos,
+									categoria: objCategoria});
+	}catch(e){
+		console.log(e);
+		res.render('Error', {code: 404,
+							msg: "Categoría no encontrada..."});
+	}
+})
+
 server.use('/img', express.static('assets'));
 server.use('/css', express.static('../css'));
+server.use('/js', express.static('../js'));
 
 server.listen(8080, function(){
 	console.log('Estamos corriendo en el puerto 8080....');

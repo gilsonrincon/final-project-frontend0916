@@ -1,0 +1,6 @@
+{
+	"id": 1,
+	"name": "Categoría 1",
+	"description": "Descripciòn de la categoría 1",
+	"products": [1,3]
+}
