@@ -19,8 +19,11 @@ server.get('/', function(req, res){
 });
 
 server.get('/contacto', function(req, res){
-	//res.send('hola contacto');
-	res.render('contacto');
+	if(req.query.name){
+		res.send(req.query);
+	}else{
+		res.render('contacto');
+	}
 });
 
 server.get('/producto/:id',function(req, res){
