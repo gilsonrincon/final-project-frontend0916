@@ -59,6 +59,20 @@ server.get("/categoria/:id",function(req, res){
 	}
 })
 
+server.get("/content/:name", function(req, res){
+	var contentJSON = "cms/"+req.params.name+".json";
+
+	try{
+		var objcontentJSON = JSON.parse(fs.readFileSync(contentJSON, 'utf8'));
+		res.render('content', objcontentJSON);
+
+	}catch(e){
+		console.log(e);
+		res.render('error', {code: 404, 
+							msg: "Página no encontrada..."});
+	}
+})
+
 server.use('/img', express.static('assets'));
 server.use('/css', express.static('./css'));
 server.use('/js', express.static('./js'));

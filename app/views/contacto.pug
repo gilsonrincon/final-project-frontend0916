@@ -2,12 +2,15 @@ extends esquema
 
 block content
     h1.titulo-productos-destacados Contáctenos
-    form(action='/contacto', method='POST')
+    form.form-horizontal(action='/contacto', method='POST')
       .form-group
-        label(for='name') Nombre completo
-        input#name.form-control(type='text', required="required" placeholder='Su nombre')
+        label.col-sm-6.control-label(for='name') Nombre completo
+        div.col-sm-6
+            input#name.form-control(type='text', required="required" placeholder='Su nombre')
       .form-group
-        label(for='email') Correo electrónico
-        input#email.form-control(type='email', required="required" placeholder='Su e-mail')
-      button.btn.btn-primary(type='submit') Enviar
-
+        label.col-sm-6.control-label(for='email') Correo electrónico
+        div.col-sm-6
+            input#email.form-control(type='email', required="required" placeholder='Su e-mail')
+      div.form-group
+        div.col-sm-offset-6.col-sm-6
+            button.btn.btn-primary(type='submit') Enviar

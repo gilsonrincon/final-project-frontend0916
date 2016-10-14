@@ -2,7 +2,12 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    title eCommerce Store
+    if title
+      title= title
+    else
+      title eCommerce Store
+    if description
+      meta(name="description", content='"'+description+'"')
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/main.css')
   body
@@ -83,11 +88,11 @@ html(lang='en')
       .row
         ul.about-us.col-xs-12.col-sm-6.col-md-4
           li
-            a(href='') Who we are?
+            a(href='/content/who-we-are') Who we are?
           li
-            a(href='') Our mission
+            a(href='/content/our-mission') Our mission
           li
-            a(href='') Our history
+            a(href='/content/our-history') Our history
         ul.contact-us.col-xs-12.col-sm-6.col-md-4
           li 1-800-331-24455
           li San Francisco
@@ -105,3 +110,4 @@ html(lang='en')
 
     script(src='/js/jquery.min.js')
     script(src='/js/bootstrap.min.js')
+    script(src='/js/common.js')
