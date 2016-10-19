@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shop">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/productsList.js"></script>
+</head>
+<body>
+	<!-- controlador para la vista de todos los productos -->
+	<div ng-controller="ListProductsController as prListCtrl">
+		<div ng-repeat="product in prListCtrl.products">
+			<h2>
+			<a href="product1.html">
+				{{product.name | uppercase}}</h2>
+			</a>
+			<img src="img/{{product.img}}" alt="">
+			<p>{{product.description}}</p>
+			<p>{{product.price | currency:$:0}}</p>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
