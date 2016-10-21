@@ -1,0 +1,10 @@
+{
+	"id": 3,
+	"name": "Producto 3",
+	"description": "Esta es la descripción del producto 3",
+	"img": "producto3.jpg",
+	"price": 7000,
+	"tags": [
+		"Etiqueta 1", "Etiqueta 2", "Etiqueta 3"
+	]
+}

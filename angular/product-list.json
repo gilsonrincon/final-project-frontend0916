@@ -1,0 +1,42 @@
+[
+{
+	"id": 1,
+	"name": "Producto 1",
+	"description": "Esta es la descripción del producto",
+	"img": "producto1.jpg",
+	"price": 2500,
+	"tags": [
+		"Etiqueta 1", "Etiqueta 2", "Etiqueta 3"
+	]
+},
+{
+	"id": 2,
+	"name": "Producto 2",
+	"description": "Esta es la descripción del producto 2",
+	"img": "producto2.jpg",
+	"price": 5500,
+	"tags": [
+		"Etiqueta 1", "Etiqueta 2", "Etiqueta 3"
+	]
+},
+{
+	"id": 3,
+	"name": "Producto 3",
+	"description": "Esta es la descripción del producto 3",
+	"img": "producto3.jpg",
+	"price": 7000,
+	"tags": [
+		"Etiqueta 1", "Etiqueta 2", "Etiqueta 3"
+	]
+},
+{
+	"id": 4,
+	"name": "Producto 4",
+	"description": "Esta es la descripción del producto 4",
+	"img": "producto4.jpg",
+	"price": 10500,
+	"tags": [
+		"Etiqueta 1", "Etiqueta 2", "Etiqueta 3"
+	]
+}
+]
