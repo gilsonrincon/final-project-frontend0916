@@ -1,4 +1,12 @@
-<div ng-repeat="product in $ctrl.products" class="col-xs-12 col-sm-6 col-md-4">
+<div class="form-group">
+	<input ng-model="$ctrl.query" type="text" class="form-control" placeholder="Search">
+	<select ng-model="$ctrl.orderProp">
+        <option value="name">Nombre</option>
+        <option value="price">Precio</option>
+    </select>
+</div>
+
+<div ng-repeat="product in $ctrl.products | orderBy : $ctrl.orderProp | filter : $ctrl.query" class="col-xs-12 col-sm-6 col-md-4">
 	<h2>{{product.name}}</h2>
 	<img class="img-responsive" src="img/{{product.img}}" alt="">
 	<p>{{product.description}}</p>

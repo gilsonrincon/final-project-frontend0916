@@ -1,7 +1,7 @@
 [
 {
 	"id": 1,
-	"name": "Producto 1",
+	"name": "Teléfono",
 	"description": "Esta es la descripción del producto",
 	"img": "producto1.jpg",
 	"price": 2500,
@@ -14,7 +14,7 @@
 	"name": "Producto 2",
 	"description": "Esta es la descripción del producto 2",
 	"img": "producto2.jpg",
-	"price": 5500,
+	"price": 500,
 	"tags": [
 		"Etiqueta 1", "Etiqueta 2", "Etiqueta 3"
 	]
