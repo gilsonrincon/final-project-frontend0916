@@ -2,4 +2,6 @@
 	<h2>{{product.name}}</h2>
 	<img class="img-responsive" src="img/{{product.img}}" alt="">
 	<p>{{product.description}}</p>
+	<p>Precio: {{product.price | currency:$:0}}</p>
+	<a href="#!/product/{{product.id}}">Detalles....</a>
 </div>
