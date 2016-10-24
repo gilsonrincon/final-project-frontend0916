@@ -8,7 +8,7 @@ angular.module('shop')
 
           $routeProvider.when('/',{
             templateUrl: 'views/layout-index.html'
-          }).when('/product', {
-            template: "Producto"
+          }).when('/product/:product_id', {
+            templateUrl: "views/layout-product.html"
           }).otherwise('/');
         }]);
